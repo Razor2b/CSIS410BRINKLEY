@@ -23,6 +23,7 @@
         <?php
         phpinfo();
         ?>
+    </div>
 
 </body>
 
