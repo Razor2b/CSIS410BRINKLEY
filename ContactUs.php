@@ -19,9 +19,9 @@
     <div style="padding:0 30px">
         <h3>Contact Us!</h3>
         <?php
-        print "You can contact us either email or phone.";
-        print "We would love to start the process for your easy equipment ordering.";
-        print "ContactUs@email.com or call us toll free at 1(800)-555-5323";
+        echo nl2br ("You can contact us either email or phone. 
+        \nWe would love to start the process for your easy equipment ordering. 
+        \nContactUs@email.com or call us toll free at 1(800)-555-5323");
         ?>
     </div>
 
