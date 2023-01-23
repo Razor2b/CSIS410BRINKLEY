@@ -5,7 +5,7 @@ body {
 }
 
 
-header {
+#header {
     width: 100%;
     height: 50px;
     font-size: 40px;
@@ -69,4 +69,51 @@ header {
 
 .subnav:hover .subnav-content {
     display: block;
+}
+
+/*CSS code for the Employee Directory Part*/
+#chart {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#chart ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#chart ul li {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin: 20px;
+}
+
+#chart ul li img {
+    height: 50px;
+    width: 50px;
+    
+}
+
+#chart ul li p {
+    margin: 10px 0;
+}
+
+#employee-info {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#employee-info img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#employee-info p {
+    margin: 10px 0;
 }

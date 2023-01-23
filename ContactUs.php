@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>Razor's Medical Equipment ContactUs</title>
+    <title>ContactUs</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="shortcut icon" href="images/Ducklogo.jpg" />
 
     <!--    
-        Rachel Brinkley's Liberty University 410 B01 web project
+        Rachel Brinkley's Liberty University CSIS410 B01 web project
     -->
 
     <?php include "header.html"; ?>

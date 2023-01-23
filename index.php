@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>Rachel Brinkley Home Page</title>
+    <title>Home Page</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="shortcut icon" href="images/Ducklogo.jpg" />
 
     <!--    
-        Rachel Brinkley's Liberty University 410 B01 web project
+        Rachel Brinkley's Liberty University CSIS410 B01 web project
     -->
 
     <?php include "header.html"; ?>
@@ -18,7 +18,7 @@
 <body>
     <div style="padding:0 30px">
         <h3>Rachel Brinkley's Website for CSIS 410 B01 class</h3>
-        <p>Enjoy my website Site this the Home page.</p>
+        <p>Enjoy my website Site! This is the Home page.</p>
         <br>
         <p>Each folder above on the navbar is the Module Week topics. It was easier to have a smaller title.</p>
         <p>Module 1: Week 1 Foundations</p>
@@ -30,6 +30,8 @@
         <p>Module 6: Week 6 Database</p>
         <p>Module 8: Week 8 CMS Database</p>
         <br>
+        <p>I also upload my code to my GitHub repository before I "turn in" my asisgnments. (When I have finshished and have turned in the Word Doc.)</p>
+        <p><a href="https://github.com/Razor2b/CSIS410BRINKLEY">CSIS 410 GitHub repository.</a></p>
 
     </div>
 
