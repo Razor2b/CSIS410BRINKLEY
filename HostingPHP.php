@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HostingPHP</title>
+    <title>Hosting PHP</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style.css">
@@ -21,6 +21,7 @@
 
     <div style="padding:0 30px">
         <?php
+        echo 'Hosting PHP';
         phpinfo();
         ?>
     </div>
@@ -31,7 +32,7 @@
 <br>
 
 <footer>
-    <?php include "footer.php";\?>
+    <?php include "footer.php"; ?>
 </footer>
 
 

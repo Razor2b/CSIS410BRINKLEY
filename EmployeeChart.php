@@ -17,7 +17,7 @@
 
 <body>
     <div style="padding:0 30px">
-        <h2>Employee Directory</h2>
+        <h3>Employee Directory</h3>
         <p>Meet the amazing employees at Razor's Medical Equipment.</p>
         <br>
         <h3>Please select a team member from the list to view information.</h3>

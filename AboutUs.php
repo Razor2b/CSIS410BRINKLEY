@@ -17,7 +17,7 @@
 
 <body>
     <div style="padding:0 30px">
-        <h3>Rachel Brinkley's Website for CSIS 410 B01 class</h3>
+        <h3>About Us</h3>
         <p>Razor's Medical Equipment is a new wave of orders, processing, and maintaining hospital equipment.
             We strive to make every step of owning medical equipment worry-free. With every order, we
             ensure that you get what you ordered and that nothing is broken. When new equipment is deliveried Razor's

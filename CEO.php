@@ -17,7 +17,7 @@
 
 <body>
     <br>
-    <div style="padding:0 30px">
+    <div style="padding:0 30px; float:center;">
         <?php require("Variables.php");
         //Information
         echo '<img src="images/SelfPhoto.jpg" alt=Rachel Brinkely style="width:253px";>';
@@ -27,6 +27,9 @@
         echo nl2br("\nEducation: $rachel_degree");
         echo nl2br("\nHobbies: $rachel_hobby");
         ?>
+        <br>
+        <p><a href="EmployeeChart.php">Back to Employee Directory</a></p>
+
     </div>
 
 </body>
