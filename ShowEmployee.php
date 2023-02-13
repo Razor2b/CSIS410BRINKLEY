@@ -28,7 +28,7 @@
 
         // Validation
         if (empty($employee['degree'])) {
-            print "YOUR DEGREE OR CERTIFICATIONS NEED STO BE ENTERED.";
+            print "YOUR DEGREE OR CERTIFICATIONS NEEDS TO BE ENTERED.";
             $okay = FALSE;
         }
 

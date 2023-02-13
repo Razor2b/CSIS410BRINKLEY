@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: login.php');
+    exit;
+}
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header('Location: login.php');
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +32,7 @@
 
 <body>
     <div style="padding:0 30px">
+        <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></p>
         <h3>Employee Directory</h3>
         <p>Meet the amazing employees at Razor's Medical Equipment.</p>
         <br>
@@ -67,5 +83,5 @@
 <br>
 
 <footer>
-    <?php include "footer.php";?>
+    <?php include "footer.php"; ?>
 </footer>

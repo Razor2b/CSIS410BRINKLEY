@@ -13,15 +13,7 @@
             $date_time->setTimestamp($timestamp);
 
             echo $date_time->format("F j Y g:i a.");
-
-            if (!isset($_SESSION['username'])) {
-                echo " USER NOT LOGGED IN. <a href='login.php'>Log In here</a>";
-            } else echo " User: {$_SESSION['username']}";
-            if (isset($_SESSION['username'])) {
-                echo " <a href='LogoutQuestion.php'>Logout</a>";
-            }
             ?>
-            
         </p>
     </div>
 </footer>
