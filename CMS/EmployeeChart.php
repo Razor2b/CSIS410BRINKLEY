@@ -1,38 +1,23 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header('Location: login.php');
-    exit;
-}
-
-if (isset($_GET['logout'])) {
-    session_destroy();
-    header('Location: login.php');
-    exit;
-}
-
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Employee Directory</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="stylesheet" href="css/Style.css">
-    <link rel="shortcut icon" href="images/Ducklogo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="shortcut icon" href="/images/Ducklogo.jpg" />
 
     <!--    
         Rachel Brinkley's Liberty University CSIS410 B01 web project
     -->
 
     <?php include "header.html"; ?>
+    <?php include "menu.php"; ?>
 </head>
 
 <body>
     <div style="padding:0 30px">
-        <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></p>
         <h3>Employee Directory</h3>
         <p>Meet the amazing employees at Razor's Medical Equipment.</p>
         <br>
@@ -85,3 +70,5 @@ if (isset($_GET['logout'])) {
 <footer>
     <?php include "footer.php"; ?>
 </footer>
+
+<html>

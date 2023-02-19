@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div style="padding:0 30px">
-        <h1>Login to see Employee Directory</h1>
+        <h3>Login to see Employee Directory</h3>
 
         <?php if (!empty($errors)) : ?>
             <ul>
@@ -66,12 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username">
             </div>
-
+            <br>
             <div>
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password">
             </div>
-
+            <br>
             <button type="submit">Login</button>
         </form>
     </div>
