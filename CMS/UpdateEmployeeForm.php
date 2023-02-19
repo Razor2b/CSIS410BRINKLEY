@@ -1,8 +1,13 @@
 <?php
-// Start the session
+
+// START SESSION
 session_start();
+
+if (isset($_SESSION['access_level'])) {
+    session_unset();
+    session_destroy();
+  }
 ?>
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,18 +16,16 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style1.css">
     <link rel="shortcut icon" href="/images/Ducklogo.jpg" />
-
     <!--    
         Rachel Brinkley's Liberty University CSIS410 B01 web project
     -->
-
     <?php include "header.html"; ?>
     <?php include "menu.php"; ?>
 </head>
 
 <body>
     <div style="padding:0 30px">
-        <p>Welcome, <?php echo htmlspecialchars($_SESSION['access_level']); ?></p>
+        <p>Welcome,</p>
         <h2>Update Your Employee Profile</h2>
         <p>Please select your name and input the updated information.</p>
 

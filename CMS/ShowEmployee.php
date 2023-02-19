@@ -1,17 +1,24 @@
-<!DOCTYPE html>
+<?php
+
+// START SESSION
+session_start();
+
+if (isset($_SESSION['access_level'])) {
+    session_unset();
+    session_destroy();
+  }
+?>
 <html>
 
 <head>
-    <title>Update Employee Information form</title>
+    <title>Update Employee Information</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style1.css">
     <link rel="shortcut icon" href="/images/Ducklogo.jpg" />
-
     <!--    
         Rachel Brinkley's Liberty University CSIS410 B01 web project
     -->
-
     <?php include "header.html"; ?>
     <?php include "menu.php"; ?>
 </head>
@@ -30,17 +37,17 @@
 
         // Validation
         if (empty($employee['degree'])) {
-            print "YOUR DEGREE OR CERTIFICATIONS NEEDS TO BE ENTERED. ";
+            print "YOUR DEGREE OR CERTIFICATIONS NEEDS TO BE ENTERED.";
             $okay = FALSE;
         }
 
         if (empty($employee['hobby'])) {
-            print " A HOBBY NEEDS TO BE ENETERED. ";
+            print "A HOBBY NEEDS TO BE ENETERED.";
             $okay = FALSE;
         }
 
         if (empty($employee['project'])) {
-            print " A PROJECT NEEDS TO BE ENTERED.";
+            print "A PROJECT NEEDS TO BE ENTERED.";
             $okay = FALSE;
         }
         ?>
@@ -62,3 +69,5 @@
 <footer>
     <?php include "footer.php"; ?>
 </footer>
+
+</html>
