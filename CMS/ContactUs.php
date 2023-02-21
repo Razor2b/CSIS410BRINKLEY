@@ -46,10 +46,10 @@
 
                             <!-- message  -->
                             <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
-
+                            <br>
+                            <br>
                             <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                                 <i class="fa fa-paper-plane"></i>
-                                <br>
                                 <span class="send-text">SEND</span>
                             </button>
                         </form>

@@ -77,7 +77,7 @@
         <button class="subnavbtn">Product Support<i class="fa fa-caret-down"></i></button>
         <div class="subnav-content">
             <a href="GETform.php">Product Survey</a>
-            <a href=" ">Product How To</a>
+            <a href="HowTo.php">Product How To</a>
         </div>
     </div>
     <a href="ContactUs.php">Contact Us</a>

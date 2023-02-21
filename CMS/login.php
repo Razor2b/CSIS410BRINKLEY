@@ -46,6 +46,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style1.css">
     <link rel="shortcut icon" href="/images/Ducklogo.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!--    
         Rachel Brinkley's Liberty University CSIS410 B01 web project
@@ -68,12 +69,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             <input type="text" id="username" name="username">
             <br>
             <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <div class="password-container" id="password-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password...">
+                <i class="fa-solid fa-eye" id="show-password"></i>
+            </div>
+            
             <br>
             <br>
             <button type="submit">Login</button>
         </form>
+        <script src="PasswordEye.js"></script>
     </div>
 </body>
 <br>

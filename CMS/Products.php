@@ -145,7 +145,7 @@ exit();
 
         <br>
         <div class="productimage"><img src="images/Defibrillator.jpg" alt="Encore Series Physio-Control LIFEPAK 15 defibrillator"></div>
-        <h4>All LifePak 15 configurations include the following base specifications: Encore Series Physio-Control LIFEPAK 15 defibrillator is priced at $5,995.00 per unit.</h4>
+        <h4>All LifePak Encore Series Physio-Control LIFEPAK 15 defibrillator is priced at $5,995.00 per unit.</h4>
         <p>ADAPTIV Biphasic Technology. Manual & AED External Defibrillation. 8.4" Color LCD Screen. CPR Metronome. Noninvasive Pacing (Demand & Non-Demand).
             3-Lead ECG Monitoring. 100mm Printer.</p>
         <form action="cart.php" method="post">
