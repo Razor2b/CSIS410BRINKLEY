@@ -1,12 +1,6 @@
 <?php
-
 // START SESSION
 session_start();
-
-if (isset($_SESSION['access_level'])) {
-    session_unset();
-    session_destroy();
-  }
 ?>
 <html>
 

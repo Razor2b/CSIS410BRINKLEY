@@ -64,17 +64,16 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <?php if (isset($error)) : ?>
             <p><?php echo $error; ?></p>
         <?php endif; ?>
-        <form method="post" action="">
+        <form method="post" action="" id="login-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
             <br>
             <br>
             <div class="password-container" id="password-container">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Password...">
+                <input type="password" id="password" name="password">
                 <i class="fa-solid fa-eye" id="show-password"></i>
             </div>
-            
             <br>
             <br>
             <button type="submit">Login</button>

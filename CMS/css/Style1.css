@@ -30,6 +30,69 @@ body {
     width: 50px;
 
 }
+#shopping_cart{
+    font-size: 25px;
+}
+#order-table{
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.shipping_info{
+    width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid gray;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+tr.selected {
+  background-color: #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ddd;
+}
+.btn-danger{
+    background-color: red;
+    padding: 5px;
+    color: white;
+}
+.shipping_info label{
+    font-size: 17px;
+
+}
+.shipping_info input{
+    padding: 2px;
+    margin-top: 2px;
+
+}
+.btn-primary{
+    border: none;
+    background: green;
+    color: white;
+}
+.quantity{
+    width: 50px;
+    padding: 5px;
+}
+
 
 #chart ul li p {
     margin: 10px 0;
@@ -198,4 +261,24 @@ button {
     right: 4%;
     cursor: pointer;
     color: lightgray;
+}
+.main_div{
+    display: flex;
+    flex-flow: wrap;
+}
+.product_div{
+    width: 400px;
+    margin: 20px;
+}
+.product_div .productimage{
+    width: 200px;
+    margin-left: 30px;
+}
+.product_div .quantity{
+    width: 60px;
+}
+.product_div .add_to_cart{
+    background: green;
+    padding: 10px;
+    color: white;
 }
