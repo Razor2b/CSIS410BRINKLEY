@@ -27,7 +27,7 @@
         <p>Module 3: Week 3 Arrays</p>
         <p>Module 4: Week 4 Sessions</p>
         <p>Module 5: Week 5 CMS Sessions</p>
-        <p>Module 6: Week 6 Database</p>
+        <p>Module 6: Week 6 Database - <a href="Database Assignment Does Work.mp4">Video of my code working for this assignment.</a></p>
         <p>Module 8: Week 8 CMS Database</p>
         <br>
         <p>I also upload my code to my GitHub repository before I "turn in" my asisgnments. (When I have finshished and have turned in the Word Doc.)</p>
