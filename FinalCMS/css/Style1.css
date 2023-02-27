@@ -126,17 +126,14 @@ th {
 }
 
 .full {
-    width: 80%;
-    display: inline-block;
-    margin: 2%;
-    margin-left: 10%;
+    width: 50%;
+    display:block;
     text-align: center;
-    background-color: black;
+    background-color: #3CB371;
     color: white;
-    border: 15px solid orange;
+    border: 15px solid rgb(250, 195, 94);
     border-radius: 5px;
-    margin-bottom: 8%;
-    margin-top: 8%;
+    margin: 2%;
 }
 
 .full h3 {
@@ -166,9 +163,10 @@ button {
 }
 
 .btn-primary {
-    background-color: black;
+    background-color: white;
     border: 2px solid white;
     border-radius: 5%;
+    color: black;
 }
 
 .list-item {
@@ -182,7 +180,7 @@ button {
 }
 
 .list-item a {
-    color: white;
+    color: black;
     display: inline-block;
 }
 
@@ -191,12 +189,12 @@ button {
 }
 
 .form-control {
-    background-color: black;
+    background-color: white;
 }
 
 @media screen and (min-width: 770px) {
     .full {
-        width: 70%;
+        width: 60%;
         margin-left: 15%;
     }
 
@@ -216,7 +214,7 @@ button {
     .lt {
         width: 55%;
         display: inline-block;
-        float: left;
+        float: inherit;
         margin-right: 0;
     }
 
@@ -251,17 +249,17 @@ button {
 
 #password-container input[type="password"],
 #password-container input[type="text"] {
-    width: 100%;
-    padding: 12px;
+    width: 200px;
+    padding: 2px;
     box-sizing: border-box;
 }
 
 .fa-eye {
-    position: absolute;
+    position: static;
     top: 28%;
-    right: 4%;
+    right: 5px;
     cursor: pointer;
-    color: lightgray;
+    color: rgb(68, 60, 60);
 }
 
 /*Cart css code*/
