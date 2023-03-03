@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'config.php';
 
 // Set the username and password for each account
 $accounts = array(
@@ -8,30 +9,31 @@ $accounts = array(
     'customer' => 'customer'
 );
 
-// Check if the user has submitted the login form
-if (isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $timestamp = date('Y-m-d H:i:s');
 
-    // Check if the username and password match an account
-    if (isset($accounts[$username]) && $accounts[$username] == $password) {
-        // Set the username and access level in the session
+    $sql = $con->prepare("select id, access_level, firstname, lastname, email from user where username = ? and password = ? limit 1");
+    $sql->bind_param("ss", $username, $password);
+    $sql->execute();
+
+    $result = $sql->get_result();
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row["id"];
+        $_SESSION['access_level'] = $row["access_level"];
+        $_SESSION['firstname'] = $row["firstname"];
+        $_SESSION['lastname'] = $row["lastname"];
+        $_SESSION['email'] = $row["email"];
         $_SESSION['username'] = $username;
-        $_SESSION['access_level'] = $username;
 
-        // Redirect to the appropriate page
-        if ($username == 'admin') {
-            header('Location: admin.php');
-            exit();
-        } else if ($username == 'publisher') {
-            header('Location: publisher.php');
-            exit();
-        } else if ($username == 'customer') {
-            header('Location: customer.php');
-            exit();
-        }
+        $stmt = "UPDATE `user` SET `login_timestamp`='$timestamp' WHERE id = '" . $_SESSION["user_id"] . "'";
+        mysqli_query($con, $stmt);
+
+        header("Location: index.php");
     } else {
-        $error = 'Invalid username or password.';
+        $error_message = "Incorrect email or password";
     }
 }
 ?>
@@ -64,18 +66,21 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <?php if (isset($error)) : ?>
             <p><?php echo $error; ?></p>
         <?php endif; ?>
-        <form method="post" action="" id="login-form">
+        <form method="post" action="login.php">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
             <br>
             <br>
             <div class="password-container" id="password-container">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" placeholder="Password...">
                 <i class="fa-solid fa-eye" id="show-password"></i>
             </div>
+
             <br>
-            <button type="submit">Login</button>
+            <br>
+            <!-- <button type="submit">Login</button> -->
+            <input type="submit" name="login" value="Login">
         </form>
         <script src="PasswordEye.js"></script>
     </div>

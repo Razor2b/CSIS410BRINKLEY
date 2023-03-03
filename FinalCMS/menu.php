@@ -81,5 +81,19 @@
         </div>
     </div>
     <a href="ContactUs.php">Contact Us</a>
-    <a href="login.php">Login</a>
+    <?php
+    if (!isset($_SESSION['user_id'])) {
+        echo '<a href="login.php">Login</a>';
+        echo '<a href="signup.php">Signup</a>';
+    } else {
+        $access_level = $_SESSION['access_level'];
+        if ($access_level == "admin") {
+            echo '<a href="admin.php">Admin Panel</a>';
+        } else if ($access_level == "publisher") {
+            echo '<a href="publisher.php">Publisher Panel</a>';
+        }
+    }
+
+    ?>
+
 </div>

@@ -1,3 +1,44 @@
+<?php
+    session_start();
+    include 'config.php';
+
+    $query  = "SELECT * FROM employee"; 
+
+    $output = '';
+    $statement = $db->prepare($query);
+    if ($statement->execute()) {
+        $result = $statement->fetchAll();
+        foreach ($result as $value) {
+            $job_title = $value["job_title"];
+            $id = $value["id"];
+            $link = "";
+            if($job_title == "CEO"){
+                $link = "CEO.php?id=".$id;
+            }else if($job_title == "CFO"){
+                $link = "CFO.php?id=".$id;
+            }else if($job_title == "IT Manager"){
+                $link = "ITManager.php?id=".$id;
+            }else if($job_title == "Head Sales Rep"){
+                $link = "HeadRep.php?id=".$id;
+            }else if($job_title == "Sales Rep"){
+                $link = "SalesRep.php?id=".$id;
+            }else if($job_title == "Machine Mechanic Manager"){
+                $link = "Mechanic.php?id=".$id;
+            }else{
+                $link = "NewEmployee.php?id=".$id;
+            }
+            $output .= '
+                <p>'.$value["name"].' - '.$value["job_title"].'</p>
+                <a href="'.$link.'">More Information</a>
+                <br>
+                <br>
+            ';
+                    
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -23,41 +64,7 @@
         <br>
         <h3>Please select a team member from the list to view information.</h3>
 
-        <!-- display info for Rachel Brinkley-->
-        <p>Rachel Brinkley - CEO</p>
-        <a href="CEO.php">More Information</a>
-        <br>
-        <br>
-
-        <!--display info for Charles Brinkley-->
-        <p>Charles Brinkley - CFO</p>
-        <a href="CFO.php">More Information</a>
-        <br>
-        <br>
-
-        <!--display info for Christopher Kelly-->
-        <p>Christopher Kelly - IT Manager</p>
-        <a href="ITManager.php">More Information</a>
-        <br>
-        <br>
-
-        <!--display info for Sharon Brinkley-->
-        <p>Sharon Brinkley - Head Sales Rep.</p>
-        <a href="HeadRep.php">More Information</a>
-        <br>
-        <br>
-
-        <!--display info for Collin Miller-->
-        <p>Collin Miller - Sales Rep.</p>
-        <a href="SalesRep.php">More Information</a>
-        <br>
-        <br>
-
-        <!--display info for Carol Martin-->
-        <p>Carol Martin - Machine Mechanic Manager</p>
-        <a href="Mechanic.php">More Information</a>
-        <br>
-        <br>
+        <?php echo $output; ?>
 
     </div>
     </div>

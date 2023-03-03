@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div>
+    <div style="padding:0 30px">
         <form class="form-horizontal" method="post" action="ContactForm.php">
             <section id="last">
                 <!-- heading -->

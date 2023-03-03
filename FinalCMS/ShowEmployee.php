@@ -1,6 +1,12 @@
 <?php
+
 // START SESSION
 session_start();
+
+if (isset($_SESSION['access_level'])) {
+    session_unset();
+    session_destroy();
+}
 ?>
 <html>
 
@@ -47,11 +53,11 @@ session_start();
         ?>
         <!--Prints out information-->
         <ul style="list-style-type:none;">
-            <li>Education:  <?php echo $employee['degree']; ?></li>
+            <li>Education: <?php echo $employee['degree']; ?></li>
             <br>
-            <li>Hobby:  <?php echo $employee['hobby']; ?></li>
+            <li>Hobby: <?php echo $employee['hobby']; ?></li>
             <br>
-            <li>Current Project:  <?php echo $employee['project']; ?></li>
+            <li>Current Project: <?php echo $employee['project']; ?></li>
         </ul>
 
     </div>

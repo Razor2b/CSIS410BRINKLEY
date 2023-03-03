@@ -21,9 +21,10 @@
         <h3>Thank your for leaving your feedback.</h3>
         <h4> We always listen to our customer's opinions as we strive to always making our company better.</h4>
         <p>If you like to talk to a representative about issues you are having with your equipement please fill out this <a href="ContactUs.php">form</a>
-        <br> and a sales rep will be in contact with in 24hrs. Thank you!</p>
+            <br> and a sales rep will be in contact with in 24hrs. Thank you!
+        </p>
 
-    
+
     </div>
 
 
@@ -33,7 +34,7 @@
 <br>
 
 <footer>
-    <?php include "footer.php";?>
+    <?php include "footer.php"; ?>
 </footer>
 
 

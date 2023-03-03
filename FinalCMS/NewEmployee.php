@@ -46,7 +46,7 @@ if (isset($_POST['delete'])) {
 <html>
 
 <head>
-    <title>Employee Carol Martin</title>
+    <title>Employee Charles Brinkley</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Style1.css">
@@ -77,9 +77,9 @@ if (isset($_POST['delete'])) {
 
 <body>
     <br>
-    <div style="padding:0 30px;  float:center;">
+    <div style="padding:0 30px; float:center;">
         <?php require("Variables.php");
-        echo '<img src="images/' . $image . '" alt="Charles Brinkley" style="width:253px";>';
+        echo '<img src="images/' . $image . '" alt="' . $name . '" style="width:253px";>';
         echo nl2br("\n<h2>" . $name . "</h2>");
         echo nl2br("\nJob Title: " . $job_title);
         echo nl2br("\nDepartment: " . $department);
@@ -99,7 +99,7 @@ if (isset($_POST['delete'])) {
         <?php
         echo '<a id="update-btn" href="UpdateEmployeeForm.php">Update this Employee</a>';
         if ($_SESSION['access_level'] == "admin") {
-            echo '<form action="CFO.php?id=' . $id . '" method="post">
+            echo '<form action="NewEmployee.php?id=' . $id . '" method="post">
                         <input type="submit" class="delete" name="delete" value="Delete">
                     </form>';
         }

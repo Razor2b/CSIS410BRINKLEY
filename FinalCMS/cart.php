@@ -8,12 +8,11 @@
     <div class="table-responsive cart_details" id="order-table">
         <table class="table table-bordered table-striped">
             <tr>
-                <th width="10%">Product ID</th>
-                <th width="40%">Product Name</th>
+                <th width="45%">Product Name</th>
                 <th width="10%">Quantity</th>
                 <th width="20%">Price</th>
                 <th width="15%">Total</th>
-                <th width="5%">Action</th>
+                <th width="10%">Action</th>
             </tr>
 
     ';
@@ -22,7 +21,6 @@
             $product_id = $value["product_id"];
             $output .= '
             <tr>
-                <td>'.$value["product_id"].'</td>
                 <td>'.$value["product_name"].'</td>
                 <td>'.$value["product_quantity"].'</td>
                 <td align="right">$'.number_format($value["product_price"], 2).'</td>
@@ -103,40 +101,26 @@
     -->
     <?php include "header.html"; ?>
     <?php include "menu.php"; ?>
+
     <style>
         
-        
+        #checkout-btn{
+            background: green;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin-top: 30px;
+            margin-left: 30%;
+        }
     </style>
 </head>
 
 <body>
     <div class="cart_details">
         <?php echo $output; ?>
+        <h4><a id="checkout-btn" href="checkout.php">Checkout</a></h4>
     </div>
-    <div class="shipping_info">
-        <h4>Billing and Shipping Information</h4>
-        <form method="post" action="cart.php">
-            <label>First Name: </label>
-            <input type="text" name="f_name" placeholder="First Name" required><br>
-            <label>Last Name: </label>
-            <input type="text" name="l_name" placeholder="Last Name" required><br>
-            <label>Country: </label>
-            <input type="text" name="country" placeholder="Country" required><br>
-            <label>City: </label>
-            <input type="text" name="city" placeholder="City" required><br>
-            <label>State: </label>
-            <input type="text" name="state" placeholder="State" required><br>
-            <label>Postal Code: </label>
-            <input type="text" name="postal_code" placeholder="Postal Code" required><br>
-            <label>Phone Number: </label>
-            <input type="text" name="phone" placeholder="Phone Number" required><br>
-            <label>Shipping Address: </label>
-            <input type="text" name="shipping_address" placeholder="Shipping Address" required><br>
-
-            <center><input style="margin-top: 10px; padding: 10px; background: green;" type="submit" class="btn btn-primary" name="place_order" value="Place Order "></center>
-            
-        </form>
-    </div>
+    
    
 
 </body>
