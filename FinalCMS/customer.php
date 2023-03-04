@@ -22,12 +22,26 @@ session_start();
 
 <body>
     <div style="padding:0 30px">
-        <h3>WELCOME, <?php echo htmlspecialchars($_SESSION['username']); ?>! Click on a link bellow to go shopping!</h3>
-        <p><br>
-            <a href="LogoutQuestion.php">Log out</a>
-            <br>
-            <a href="Products.php">My Account</a>
-        </p>
+        <h3>WELCOME, <?php echo htmlspecialchars($_SESSION['username']); ?>! Click on the products link bellow to start shopping!</h3>
+        <div>
+            <div class="div-links">
+                <a href="LogoutQuestion.php">Log out</a>
+                <a href="Products.php">Products</a>
+                <a href="cart.php">Your Cart</a>
+            </div>
+            <div>
+                <br>
+                <h2 style="color: blue;">User Details</h2>
+                <h4>Username: <span style="color: green;"><?php echo $_SESSION['username'] ?></span></h4>
+                <h4>Access Level: <span style="color: green;"><?php echo $_SESSION['access_level'] ?></span></h4>
+                <h4>First Name: <span style="color: green;"><?php echo $_SESSION['firstname'] ?></span></h4>
+                <h4>Last Name: <span style="color: green;"><?php echo $_SESSION['lastname'] ?></span></h4>
+                <h4>Email Address: <span style="color: green;"><?php echo $_SESSION['email'] ?></span></h4>
+
+            </div>
+
+            
+        </div>
 
 
     </div>

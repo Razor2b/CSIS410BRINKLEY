@@ -49,17 +49,17 @@ if (isset($_POST['add'])) {
                 <option value="customer">Customer</option>
                 <option value="publisher">Publisher</option>
                 <option value="admin">Admin</option>
-            </select><br>
+            </select><br><br>
             <label>First Name: </label>
-            <input type="text" name="firstname" placeholder="Enter first name" required><br>
+            <input type="text" name="firstname" placeholder="Enter first name" required><br><br>
             <label>Last Name: </label>
-            <input type="text" name="lastname" placeholder="Enter last name" required><br>
+            <input type="text" name="lastname" placeholder="Enter last name" required><br><br>
             <label>Username: </label>
-            <input type="text" name="username" placeholder="Enter username" required><br>
+            <input type="text" name="username" placeholder="Enter username" required><br><br>
             <label>Email: </label>
-            <input type="email" name="email" placeholder="Enter email" required><br>
+            <input type="email" name="email" placeholder="Enter email" required><br><br>
             <label>Password: </label>
-            <input type="text" name="password" placeholder="Enter password" required><br>
+            <input type="text" name="password" placeholder="Enter password" required><br><br>
 
             <input type="submit" name="add" value="Signup">
 

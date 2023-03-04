@@ -28,13 +28,13 @@
         <p>Module 4: Week 4 Sessions</p>
         <p>Module 5: Week 5 CMS Sessions</p>
         <p>Module 6: Week 6 Database - <a href="Database Assignment Does Work.mp4">Video of my code working for this assignment.</a></p>
-        <p>Module 8: Week 8 CMS Database</p>
+        <p>Module 8: Week 8 CMS Database - <a href="FinalProjectVideoDemo.mp4">Video of my database code working for this assignment.</a></p>
         <br>
         <p>I also upload my code to my GitHub repository before I "turn in" my asisgnments. (When I have finshished and have turned in the Word Doc.)</p>
         <p><a href="https://github.com/Razor2b/CSIS410BRINKLEY">CSIS 410 GitHub repository.</a></p>
 
     </div>
-
+    
 </body>
 
 <br>

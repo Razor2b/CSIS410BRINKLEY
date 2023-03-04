@@ -27,7 +27,7 @@
                     <div class="lt">
 
                         <!-- form starting  -->
-                        <form class="form-horizontal" method="post" action="contact.php">
+                        <form class="form-horizontal" method="post" action="ContactForm.php">
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <!-- name  -->
@@ -44,8 +44,16 @@
                             </div>
                             <br>
 
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <!-- phone  -->
+                                    <input type="phone" class="form-control" id="phone" placeholder="PHONE NUMBER" name="phone" value="" />
+                                </div>
+                            </div>
+                            <br>
+
                             <!-- message  -->
-                            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+                            <textarea class="form-control" id="message" rows="10" placeholder="MESSAGE" name="message"></textarea>
                             <br>
                             <br>
                             <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
@@ -54,7 +62,7 @@
                             </button>
                         </form>
                     </div>
-                        <!-- end of form -->
+                    <!-- end of form -->
 
                     <!-- Contact information -->
                     <div class="rt">

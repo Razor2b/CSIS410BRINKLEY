@@ -1,25 +1,24 @@
 <?php
-// Get data from form 
-$name = $_POST['name'];
-$email= $_POST['email'];
-$message= $_POST['message'];
- 
-$to = "yourEmail@gmail.com";
-$subject = "This is the subject line";
- 
-// The following text will be sent
-// Name = user entered name
-// Email = user entered email
-// Message = user entered message
-$txt ="Name = ". $name . "\r\n  Email = "
-    . $email . "\r\n Message =" . $message;
- 
-$headers = "From: noreply@demosite.com" . "\r\n" .
-            "CC: somebodyelse@example.com";
-if($email != NULL) {
-    mail($to, $subject, $txt, $headers);
+include 'config.php';
+if (isset($_POST['submit'])) {
+    // Get data from form 
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    //This below line is a code to Send form entries to database
+    $sql = "INSERT INTO contactform_entries (id, name, email, phone, message) VALUES ('0', '$name', '$email', '$phone', '$message')";
+    //fire query to save entries and check it with if statement
+    $rs = mysqli_query($con, $sql);
+    if ($rs) {
+        echo "Message has been sent successfully!";
+    } else {
+        echo "Error, Message didn't send! Something Went Wrong.";
+    }
+
+    // Redirect to
+    header("Location:ContactUs.php");
 }
- 
-// Redirect to
-header("Location:ContactUs.php");
 ?>
+

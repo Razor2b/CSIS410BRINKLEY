@@ -91,6 +91,8 @@
             echo '<a href="admin.php">Admin Panel</a>';
         } else if ($access_level == "publisher") {
             echo '<a href="publisher.php">Publisher Panel</a>';
+        } else if ($access_level == "customer") {
+            echo '<a href="customer.php">Customer Panel</a>';
         }
     }
 

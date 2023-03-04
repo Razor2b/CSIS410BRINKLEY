@@ -28,6 +28,6 @@
     </p>
     <p>Validated by:</p>
     <a href="https://validator.w3.org/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88"></a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS"></a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer"> <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS"></a>
 
 </footer>

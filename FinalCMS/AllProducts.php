@@ -89,17 +89,16 @@ if (isset($_POST['delete'])) {
 <body>
     <div style="padding:0 30px" class="main_div">
         <?php echo $output; ?>
-        <br>
-        <br>
-        <h4>For more information about the quantitly or shipping for large orders ask one of our sales rep.</h4>
-        <h4>They can answer all your questions.</h4>
     </div>
 
 </body>
 
 <br>
 <br>
-<a href="#header">Back to the top</a>
+<h4 style="text-align: center;">For more information about the quantitly or shipping for large orders ask one of our sales rep.
+    <br>They can answer all your questions.
+    <br><a href="#header">Back to the top</a>
+</h4>
 <footer>
     <?php include "footer.php"; ?>
 </footer>
