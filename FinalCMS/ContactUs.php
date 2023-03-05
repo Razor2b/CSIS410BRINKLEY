@@ -1,3 +1,28 @@
+<?php
+include 'config.php';
+session_start();
+if (isset($_POST['send'])) {
+    // Get data from form 
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    //This below line is a code to Send form entries to database
+    $sql = "INSERT INTO contactform_entries (name, email, phone, message) VALUES ('$name', '$email', '$phone', '$message')";
+    //fire query to save entries and check it with if statement
+    $rs = mysqli_query($con, $sql);
+    if ($rs) {
+        echo "<script>alert('Message has been sent successfully!');</script>";
+    } else {
+        echo "<script>alert('Error, Message didn't send! Something Went Wrong.');</script>";
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +43,7 @@
 
 <body>
     <div style="padding:0 30px">
-        <form class="form-horizontal" method="post" action="ContactForm.php">
+        <form class="form-horizontal" method="post" action="ContactUs.php">
             <section id="last">
                 <!-- heading -->
                 <div class="full">
@@ -27,7 +52,7 @@
                     <div class="lt">
 
                         <!-- form starting  -->
-                        <form class="form-horizontal" method="post" action="ContactForm.php">
+                        <form class="form-horizontal" method="post" action="ContactUs.php">
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <!-- name  -->
@@ -56,7 +81,7 @@
                             <textarea class="form-control" id="message" rows="10" placeholder="MESSAGE" name="message"></textarea>
                             <br>
                             <br>
-                            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                            <button class="btn btn-primary send-button" id="submit" name="send" type="submit" value="SEND">
                                 <i class="fa fa-paper-plane"></i>
                                 <span class="send-text">SEND</span>
                             </button>

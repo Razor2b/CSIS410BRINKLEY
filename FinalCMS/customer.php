@@ -18,6 +18,18 @@ session_start();
 
     <?php include "header.html"; ?>
     <?php include "menu.php"; ?>
+    <style>
+        .div-links{
+            display: flex;
+        }
+        .div-links a{
+            margin-left: 20px;
+            color: blue;
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 
 <body>
