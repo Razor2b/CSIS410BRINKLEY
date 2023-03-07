@@ -8,8 +8,8 @@
     <div class="table-responsive cart_details" id="order-table">
         <table class="table table-bordered table-striped">
             <tr>
-                <th width="45%">Product Name</th>
-                <th width="10%">Quantity</th>
+                <th width="35%">Product Name</th>
+                <th width="20%">Quantity</th>
                 <th width="20%">Price</th>
                 <th width="15%">Total</th>
                 <th width="10%">Action</th>
@@ -22,7 +22,20 @@
             $output .= '
             <tr>
                 <td>'.$value["product_name"].'</td>
-                <td>'.$value["product_quantity"].'</td>
+                <td>
+                <div class="cart_quantity">
+                    <form method="post" action="cart.php">
+                        <input type="hidden" name="product_id" value="'.$value["product_id"].'"/>
+                        <input type="submit" class="reduce" name="reduce" value="-">   
+                    </form>
+                    <label>'.$value["product_quantity"].'</label>
+                
+                    <form method="post" action="cart.php">
+                        <input type="hidden" name="product_id" value="'.$value["product_id"].'"/>
+                        <input type="submit" class="add" name="add" value="+">   
+                    </form>
+                </div>
+                </td>
                 <td align="right">$'.number_format($value["product_price"], 2).'</td>
                 <td align="right">$'.number_format($value["product_quantity"] * $value["product_price"], 2).'</td>
                 <td>
@@ -79,9 +92,27 @@
         header("Refresh:0");
     }
 
-    if(isset($_POST['place_order'])){
+    if(isset($_POST['reduce'])){
         
-        echo "<script>alert('Order placed successfully!!')</script>";
+        $product_id = $_POST['product_id'];
+        foreach ($_SESSION['shopping_cart'] as $key => $value) {
+            if ($_SESSION['shopping_cart'][$key]['product_id'] == $product_id) {
+                if ($_SESSION['shopping_cart'][$key]['product_quantity'] > 1) {
+                    $_SESSION['shopping_cart'][$key]['product_quantity'] = $_SESSION['shopping_cart'][$key]['product_quantity'] - 1;
+                }   
+            }  
+        }
+        header("Refresh:0");
+    }
+    if(isset($_POST['add'])){
+        
+        $product_id = $_POST['product_id'];
+        foreach ($_SESSION['shopping_cart'] as $key => $value) {
+            if ($_SESSION['shopping_cart'][$key]['product_id'] == $product_id) {
+                $_SESSION['shopping_cart'][$key]['product_quantity'] = $_SESSION['shopping_cart'][$key]['product_quantity'] + 1; 
+            }  
+        }
+        header("Refresh:0");
     }
     
 
@@ -111,6 +142,23 @@
             padding: 10px;
             margin-top: 30px;
             margin-left: 30%;
+        }
+        .cart_quantity{
+            display: flex;
+        }
+        .reduce{
+            background: orange;
+            border: none;
+            width: 20px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .add{
+            background: orange;
+            border: none;
+            width: 20px;
+            font-size: 16px;
+            margin-left: 10px;
         }
     </style>
 </head>
